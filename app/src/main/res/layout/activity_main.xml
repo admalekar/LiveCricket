@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="livecricket.cricketapplication.com.livecricket.MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/eightDpGuideLine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.025" />
+
+    <TableLayout
+        android:id="@+id/tableLayout3"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintDimensionRatio="w,4:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scrollView3"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout4">
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/market_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Market Rate"
+                android:textColor="#00F"
+                android:textSize="15dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/market_rate_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/market_rate_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout4"
+        android:layout_width="189dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintDimensionRatio="h,1.5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toEndOf="@+id/scrollView3"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/playing_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scorecard"
+                android:textColor="#00F"
+                android:textSize="15dp" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score:" />
+
+            <TextView
+                android:id="@+id/score_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Overs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overs:" />
+
+            <TextView
+                android:id="@+id/Over_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Target:" />
+
+            <TextView
+                android:id="@+id/Target_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Run_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C.R.R:" />
+
+            <TextView
+                android:id="@+id/run_rate_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/required_run_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R.R.R" />
+
+            <TextView
+                android:id="@+id/Required_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </TableRow>
+
+    </TableLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="142dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="8dp"
+        android:background="#444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        >
+
+        <TextView
+            android:id="@+id/Text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="The message to be seeen"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="25dp" />
+    </ScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Batting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Batting"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Scorecard_title" />
+
+            <TextView
+                android:id="@+id/Scorecard_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Mini-Scorecard" />
+
+            <TextView
+                android:id="@+id/runs"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="40dp"
+                android:text="R"
+                app:layout_constraintStart_toEndOf="@+id/Batting"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/balls"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:text="B"
+                app:layout_constraintStart_toEndOf="@+id/runs"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_4s"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:text="4"
+                app:layout_constraintStart_toEndOf="@+id/balls"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_6s"
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:text="6"
+                app:layout_constraintStart_toEndOf="@+id/title_4s"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/strikerate"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="40dp"
+                android:text="S.R"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bowler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="80dp"
+                android:text="Bowling"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Batting" />
+
+            <TextView
+                android:id="@+id/Wickets"
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="72dp"
+                android:text="W"
+                app:layout_constraintStart_toEndOf="@+id/balls2"
+                app:layout_constraintTop_toBottomOf="@+id/title_4s" />
+
+            <TextView
+                android:id="@+id/overs"
+                android:layout_width="35dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="72dp"
+                android:text="O"
+                app:layout_constraintStart_toEndOf="@+id/bowler"
+                app:layout_constraintTop_toBottomOf="@+id/runs" />
+
+            <TextView
+                android:id="@+id/Economy"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="72dp"
+                android:text="Eco"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/strikerate" />
+
+            <TextView
+                android:id="@+id/balls2"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="72dp"
+                android:text="M"
+                app:layout_constraintStart_toEndOf="@+id/overs"
+                app:layout_constraintTop_toBottomOf="@+id/balls" />
+
+            <TextView
+                android:id="@+id/title2_4s"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="72dp"
+                android:text="R"
+                app:layout_constraintStart_toEndOf="@+id/Wickets"
+                app:layout_constraintTop_toBottomOf="@+id/title_6s" />
+
+            <TableLayout
+                android:id="@+id/tableLayout2"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="64dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:id="@+id/bat_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Batsman_1"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/run1"
+                        android:layout_width="42dp"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/ball1"
+                        android:layout_width="42dp"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/text_4_1"
+                        android:layout_width="42dp"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/text_6_1"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/SR_1"
+                        android:layout_width="36dp"
+                        android:layout_height="match_parent"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/bat_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/batsman_2"
+                        android:layout_width="133dp"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/run_2"
+                        android:layout_width="42dp"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/ball_2"
+                        android:layout_width="42dp"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/text_4_2"
+                        android:layout_width="42dp"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/text_6_2"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/SR_2"
+                        android:layout_width="36dp"
+                        android:layout_height="match_parent"
+                        android:text="0" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="330dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="36dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout2">
+
+                <TableRow
+                    android:id="@+id/bowl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/bowler_name"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/Bowlers_Over"
+                        android:layout_width="42dp"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/bowl_m"
+                        android:layout_width="42dp"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/Runs_given"
+                        android:layout_width="42dp"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/Wicekts_taken"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/Bowler_eco"
+                        android:layout_width="36dp"
+                        android:layout_height="match_parent"
+                        android:text="0" />
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="128dp"
+                android:layout_marginTop="20dp"
+                android:onClick="batsman1testonclick"
+                android:text="Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tableLayout" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="353dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>
