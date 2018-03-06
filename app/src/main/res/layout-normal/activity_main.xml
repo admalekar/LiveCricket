@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
-    tools:context="livecricket.cricketapplication.com.livecricket.MainActivity">
+    tools:context="livecricket.cricketapplication.com.livecricket.MatchActivity">
 
 
     <android.support.constraint.Guideline
@@ -178,13 +178,12 @@
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="142dp"
-        android:layout_height="199dp"
+        android:layout_width="165dp"
+        android:layout_height="290dp"
         android:layout_marginTop="8dp"
         android:background="#444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/spinner_id">
 
         <TextView
             android:id="@+id/Text_message"
@@ -200,13 +199,15 @@
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -485,17 +486,6 @@
 
             </TableLayout>
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="128dp"
-                android:layout_marginTop="20dp"
-                android:onClick="batsman1testonclick"
-                android:text="Button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tableLayout" />
-
             <android.support.constraint.Guideline
                 android:id="@+id/guideline"
                 android:layout_width="wrap_content"
@@ -514,7 +504,7 @@
     </android.support.v7.widget.CardView>
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner_id"
         android:layout_width="353dp"
         android:layout_height="24dp"
         android:layout_marginBottom="8dp"
@@ -527,5 +517,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+        android:id="@+id/volumeButton"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+
+        android:onClick="volumeOnClick"
+        android:src="@drawable/image_state"
+        app:layout_constraintStart_toEndOf="@+id/scrollView3"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout3" />
+
+
+
 
 </android.support.constraint.ConstraintLayout>
